@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="boxGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6600" />
+      <stop offset="100%" stop-color="#ff8533" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Box base -->
+  <rect x="25" y="60" width="50" height="30" fill="url(#boxGradient)" stroke="#ffffff" stroke-width="3" rx="2"/>
+  
+  <!-- Box top (perspective) -->
+  <polygon points="25,60 40,45 90,45 75,60" fill="url(#boxGradient)" stroke="#ffffff" stroke-width="3"/>
+  
+  <!-- Box side -->
+  <polygon points="75,60 90,45 90,75 75,90" fill="#ff8533" fill-opacity="0.85" stroke="#ffffff" stroke-width="3"/>
+  
+  <!-- Box lines for 3D effect -->
+  <line x1="40" y1="45" x2="40" y2="60" stroke="#ffffff" stroke-width="2.5" opacity="0.95"/>
+  <line x1="90" y1="45" x2="90" y2="75" stroke="#ffffff" stroke-width="2.5" opacity="0.95"/>
+</svg>
