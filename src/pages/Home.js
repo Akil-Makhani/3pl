@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { FileText, Package, Truck, Zap, CheckCircle, Star, ArrowRight, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { images } from '../assets/images';
 
 const Home = () => {
   const features = [
