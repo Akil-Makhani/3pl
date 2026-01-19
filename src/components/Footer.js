@@ -73,24 +73,24 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4 text-white">Contact</h3>
             <div className="space-y-4 text-gray-300">
               <motion.a
-                href="mailto:info@courierit3pl.co.nz"
+                href="mailto:support@courierit.co.nz"
                 whileHover={{ x: 5 }}
                 className="flex items-center space-x-3 group"
               >
                 <div className="p-2 bg-[#ff6600]/20 rounded-lg group-hover:bg-[#ff6600] transition-colors">
                   <Mail size={18} className="text-[#ff6600] group-hover:text-white transition-colors" />
                 </div>
-                <span className="group-hover:text-[#ff6600] transition-colors">info@courierit3pl.co.nz</span>
+                <span className="group-hover:text-[#ff6600] transition-colors">support@courierit.co.nz</span>
               </motion.a>
               <motion.a
-                href="tel:0800COURIER"
+                href="tel:092220128"
                 whileHover={{ x: 5 }}
                 className="flex items-center space-x-3 group"
               >
                 <div className="p-2 bg-[#ff6600]/20 rounded-lg group-hover:bg-[#ff6600] transition-colors">
                   <Phone size={18} className="text-[#ff6600] group-hover:text-white transition-colors" />
                 </div>
-                <span className="group-hover:text-[#ff6600] transition-colors">0800 COURIER</span>
+                <span className="group-hover:text-[#ff6600] transition-colors">09 222 0128</span>
               </motion.a>
             </div>
           </motion.div>

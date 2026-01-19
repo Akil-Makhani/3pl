@@ -324,7 +324,7 @@ const Home = () => {
               Contact us or get a quick quote!
             </p>
             <motion.a
-              href="mailto:info@courierit3pl.co.nz"
+              href="mailto:support@courierit.co.nz"
               whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(255, 255, 255, 0.3)" }}
               whileTap={{ scale: 0.95 }}
               className="bg-white text-[#ff6600] px-10 py-5 rounded-xl font-bold text-lg inline-block hover:bg-gray-50 transition-all shadow-2xl"
