@@ -37,8 +37,8 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => {
-              // Only Home is clickable, others are disabled
-              if (item.path === '/') {
+              // Home and About are clickable, Pricing is disabled
+              if (item.path === '/' || item.path === '/about') {
                 return (
                   <Link
                     key={item.path}
@@ -59,7 +59,7 @@ const Header = () => {
                   </Link>
                 );
               }
-              // Disabled links for About and Pricing
+              // Disabled link for Pricing
               return (
                 <span
                   key={item.path}
@@ -101,8 +101,8 @@ const Header = () => {
             >
               <div className="flex flex-col space-y-4">
                 {navItems.map((item) => {
-                  // Only Home is clickable, others are disabled
-                  if (item.path === '/') {
+                  // Home and About are clickable, Pricing is disabled
+                  if (item.path === '/' || item.path === '/about') {
                     return (
                       <Link
                         key={item.path}
@@ -117,7 +117,7 @@ const Header = () => {
                       </Link>
                     );
                   }
-                  // Disabled links for About and Pricing
+                  // Disabled link for Pricing
                   return (
                     <span
                       key={item.path}

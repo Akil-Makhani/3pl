@@ -226,7 +226,7 @@ const About = () => {
                   Join Kiwi businesses already saving with CourierIt – now go further with our 3PL!
                 </p>
                 <Link
-                  to="/pricing"
+                  to="/"
                   className="group relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-white bg-gradient-to-r from-[#ff6600] to-[#ff8533] rounded-xl shadow-2xl overflow-hidden"
                 >
                   <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#ff8533] to-[#ff6600] opacity-0 group-hover:opacity-100 transition-opacity"></span>
