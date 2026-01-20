@@ -38,7 +38,7 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => {
               // Home and About are clickable, Pricing is disabled
-              if (item.path === '/' || item.path === '/about') {
+              if (item.path === '/' || item.path === '/about' || item.path === '/pricing') {
                 return (
                   <Link
                     key={item.path}
@@ -102,7 +102,7 @@ const Header = () => {
               <div className="flex flex-col space-y-4">
                 {navItems.map((item) => {
                   // Home and About are clickable, Pricing is disabled
-                  if (item.path === '/' || item.path === '/about') {
+                  if (item.path === '/' || item.path === '/about' || item.path === '/pricing') {
                     return (
                       <Link
                         key={item.path}

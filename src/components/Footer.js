@@ -42,7 +42,7 @@ const Footer = () => {
               {[
                 { path: '/', label: 'Home', enabled: true },
                 { path: '/about', label: 'About Us', enabled: true },
-                { path: '/pricing', label: 'Pricing', enabled: false },
+                { path: '/pricing', label: 'Pricing', enabled: true },
               ].map((link) => (
                 <li key={link.path}>
                   {link.enabled ? (

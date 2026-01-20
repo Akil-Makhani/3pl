@@ -97,15 +97,7 @@ const Pricing = () => {
             className="text-center max-w-4xl mx-auto"
           >
             {/* Image Above Tag */}
-            <motion.img
-              src={images.business.storage}
-              alt="Storage"
-              className="w-32 h-32 md:w-40 md:h-40 object-cover rounded-2xl shadow-lg mx-auto mb-6"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              whileHover={{ scale: 1.1 }}
-            />
+            
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -117,7 +109,7 @@ const Pricing = () => {
               </div>
             </motion.div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-gray-900">
-              Transparent & <span className="bg-gradient-to-r from-[#ff6600] to-[#ff8533] bg-clip-text text-transparent">Cheapest</span> 3PL Pricing
+              Transparent & <span className="bg-gradient-to-r from-[#ff6600] to-[#ff8533] bg-clip-text text-transparent">Cheapest</span> 3PL Pricing in <span className="bg-gradient-to-r from-[#ff6600] to-[#ff8533] bg-clip-text text-transparent">Auckland</span> 
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 mb-4 font-medium">
               <span className="bg-gradient-to-r from-[#ff6600] to-[#ff8533] bg-clip-text text-transparent font-bold">CourierIt 3PL</span> (Freight Required)
@@ -153,7 +145,7 @@ const Pricing = () => {
       </section>
 
       {/* Pricing Table */}
-      <section className="py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-16 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -162,26 +154,26 @@ const Pricing = () => {
             transition={{ duration: 0.6 }}
             className="max-w-7xl mx-auto"
           >
-            <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
-              <div className="table-container">
-                <table className="w-full">
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[800px]">
                   <thead>
-                    <tr className="bg-gradient-to-r from-[#ff6600] to-[#ff8533]">
-                      <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">
+                    <tr className="bg-gray-50 border-b border-gray-200">
+                      <th className="px-4 py-3 text-left text-xs font-bold text-black uppercase tracking-wider">
                         Service/Component
                       </th>
-                      <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">
+                      <th className="px-4 py-3 text-left text-xs font-bold text-black uppercase tracking-wider">
                         Description
                       </th>
-                      <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">
+                      <th className="px-4 py-3 text-left text-xs font-bold text-black uppercase tracking-wider">
                         Our Rate (Cheapest in Auckland)
                       </th>
-                      <th className="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-wider">
+                      <th className="px-4 py-3 text-left text-xs font-bold text-black uppercase tracking-wider">
                         Notes/Comparison
                       </th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody className="bg-white divide-y divide-gray-100">
                     {pricingData.map((item, index) => (
                       <motion.tr
                         key={index}
@@ -189,16 +181,18 @@ const Pricing = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.3, delay: index * 0.05 }}
-                        className={`hover:bg-orange-50 transition-colors ${
-                          item.highlight ? 'bg-orange-50/50' : ''
+                        className={`hover:bg-gray-50 transition-colors ${
+                          item.highlight ? 'bg-orange-50/30' : ''
                         }`}
                       >
-                        <td className="px-6 py-4 font-bold text-gray-900">{item.service}</td>
-                        <td className="px-6 py-4 text-gray-700">{item.description}</td>
-                        <td className="px-6 py-4 font-bold text-lg bg-gradient-to-r from-[#ff6600] to-[#ff8533] bg-clip-text text-transparent">
-                          {item.rate}
+                        <td className="px-4 py-4 font-semibold text-gray-900 text-sm">{item.service}</td>
+                        <td className="px-4 py-4 text-gray-700 text-sm leading-relaxed">{item.description}</td>
+                        <td className="px-4 py-4">
+                          <span className="font-bold text-base text-[#ff6600]">
+                            {item.rate}
+                          </span>
                         </td>
-                        <td className="px-6 py-4 text-gray-600 text-sm">{item.notes}</td>
+                        <td className="px-4 py-4 text-gray-600 text-sm leading-relaxed">{item.notes}</td>
                       </motion.tr>
                     ))}
                   </tbody>
